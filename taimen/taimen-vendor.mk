@@ -77,7 +77,6 @@ PRODUCT_PACKAGES += \
     EuiccGoogle \
     VZWAPNLib \
     embms \
-    ims \
     CNEService \
     CarrierServices \
     CarrierSetup \
