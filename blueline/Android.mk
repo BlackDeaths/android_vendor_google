@@ -83,7 +83,6 @@ LOCAL_SRC_FILES := proprietary/app/MobileFeliCaClient/MobileFeliCaClient.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
@@ -94,7 +93,6 @@ LOCAL_SRC_FILES := proprietary/app/MobileFeliCaMenuApp/MobileFeliCaMenuApp.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
@@ -105,7 +103,6 @@ LOCAL_SRC_FILES := proprietary/app/MobileFeliCaMenuMainApp/MobileFeliCaMenuMainA
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
@@ -116,7 +113,6 @@ LOCAL_SRC_FILES := proprietary/app/MobileFeliCaSettingApp/MobileFeliCaSettingApp
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
@@ -127,7 +123,6 @@ LOCAL_SRC_FILES := proprietary/app/MobileFeliCaWebPlugin/MobileFeliCaWebPlugin.a
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
@@ -138,7 +133,6 @@ LOCAL_SRC_FILES := proprietary/app/MobileFeliCaWebPluginBoot/MobileFeliCaWebPlug
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
@@ -193,6 +187,16 @@ LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := SSRestartDetector
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/app/SSRestartDetector/SSRestartDetector.apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_SUFFIX := .apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := Tycho
 LOCAL_MODULE_OWNER := google
 LOCAL_SRC_FILES := proprietary/app/Tycho/Tycho.apk
@@ -230,7 +234,6 @@ LOCAL_SRC_FILES := proprietary/app/VZWAPNLib/VZWAPNLib.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
@@ -252,7 +255,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/AppDirectedSMSService/AppDirectedSMSServ
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
@@ -297,7 +299,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/ConnMO/ConnMO.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := platform
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
@@ -309,7 +310,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/DCMO/DCMO.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := platform
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
@@ -321,7 +321,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/DiagMon/DiagMon.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := platform
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
@@ -330,11 +329,13 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := DMService
 LOCAL_MODULE_OWNER := google
 LOCAL_SRC_FILES := proprietary/priv-app/DMService/DMService.apk
+LOCAL_REQUIRED_MODULES :=  libdmjavaplugin_32.so libdmengine_32.so
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := platform
 LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MULTILIB := 32
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
@@ -434,7 +435,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/LLKAgent/LLKAgent.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
@@ -457,7 +457,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/MyVerizonServices/MyVerizonServices.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
@@ -469,7 +468,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/OBDM_Permissions/OBDM_Permissions.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
@@ -481,7 +479,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/obdm_stub/obdm_stub.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
@@ -526,7 +523,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/Showcase/Showcase.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
@@ -562,7 +558,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/VerizonAuthDialog/VerizonAuthDialog.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
@@ -574,7 +569,6 @@ LOCAL_SRC_FILES := proprietary/priv-app/VzwOmaTrigger/VzwOmaTrigger.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
