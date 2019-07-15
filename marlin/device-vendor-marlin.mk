@@ -1,4 +1,4 @@
-$(call inherit-product, vendor/google/marlin/marlin-vendor-blobs.mk)
+$(call inherit-product, vendor/google/marlin/marlin-vendor.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=disable
